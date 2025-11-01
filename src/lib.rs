@@ -1812,6 +1812,10 @@ impl<'tu> Entity<'tu> {
 
     //- Accessors --------------------------------
 
+    pub fn raw(&self) -> CXCursor {
+        self.raw
+    }
+
     /// Evaluates this AST entity, if possible.
     #[cfg(feature="clang_3_9")]
     pub fn evaluate(&self) -> Option<EvaluationResult> {
